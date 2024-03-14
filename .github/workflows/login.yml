@@ -34,7 +34,7 @@ jobs:
       - name: 🔑 Login to Azure
         id : az-login
         # run : az login
-        run : az login --service-principal -t $ARM_TENANT_ID -u $ARM_CLIENT_ID -p $ARM_CLIENT_SECRET  
+        run : az login --service-principal -t ${{secrets.ARM_TENANT_ID}} -u ${{secrets.ARM_CLIENT_ID}} -p ${{secrets.ARM_CLIENT_SECRET}}  
       # - name: 🔑 Login to Azure
       #   uses: azure/login@v2
       #   with:
